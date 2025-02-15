@@ -25,8 +25,9 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install pandas numpy 
-          pip install nbconvert nbformat pytest
+          pip install --upgrade pip
+          pip install pandas numpy nbconvert nbformat pytest IPython
+
 
       - name: Convert Notebook to Python
         run: jupyter nbconvert --to script assignment.ipynb
